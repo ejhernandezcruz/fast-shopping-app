@@ -4,10 +4,10 @@
 
 [Fast Shopping APK](https://f-droid.org/repo/me.wolszon.fastshopping_23.apk)
 
-# Requirements
+## Requirements
 
- 1. *Install a JDK 8+ distribution such as  [Azul Zulu JDK](https://www.azul.com/downloads/?package=jdk)*  
- 2. *Add Maven into your classpath* [Maven Download](https://maven.apache.org/download.cgi)
+1. *Install a JDK 8+ distribution such as  [Azul Zulu JDK](https://www.azul.com/downloads/?package=jdk)*
+2. *Add Maven into your classpath* [Maven Download](https://maven.apache.org/download.cgi)
 
 
 
@@ -25,7 +25,7 @@ Optionally you can use any IDE of  your preference
 All the properties can be done in the following  properties file **config.properties** and **kobiton.properties**
 located in the root project folder
 
-# Dependencies
+## Dependencies
 
 | Library| Version |
 |--|--|
