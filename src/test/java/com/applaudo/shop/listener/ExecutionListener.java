@@ -1,6 +1,7 @@
 package com.applaudo.shop.listener;
 
 import com.applaudo.shop.core.Config;
+import com.applaudo.shop.core.Kobiton;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.IExecutionListener;
 
@@ -13,6 +14,7 @@ public class ExecutionListener implements IExecutionListener {
     public void onExecutionStart() {
         try {
             Config.loadConfig();
+            Kobiton.loadConfig();
         } catch (IOException e) {
             log.error("Capabilities not found", e);
             throw new RuntimeException("Config file not found");

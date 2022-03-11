@@ -86,7 +86,7 @@ public class BaseScreen {
 
     protected void scroll() {
         Dimension dimension = driver.manage().window().getSize();
-        int scrollStart = (int) (dimension.getHeight() * 0.8);
+        int scrollStart = (int) (dimension.getHeight() * 0.2);
         int scrollEnd = (int) (dimension.getHeight() * 0.1);
 
         new AndroidTouchAction(driver)

@@ -13,24 +13,28 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Objects;
 
+import static com.applaudo.shop.core.Kobiton.*;
+
 @Listeners({ExecutionListener.class})
 public class BaseTest {
+
 
     protected AppiumDriver driver;
 
     private AndroidDriver kobiton() throws MalformedURLException {
-        String kobitonServerUrl = "https://ejhernandezcruz:#######@api.kobiton.com/wd/hub";
+        String kobitonServerUrl = Kobiton.getKobitonServer();
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("sessionName", "Automation test session");
-        capabilities.setCapability("sessionDescription", "");
-        capabilities.setCapability("deviceOrientation", "portrait");
-        capabilities.setCapability("captureScreenshots", true);
-        capabilities.setCapability("app", "kobiton-store:318296");
-        capabilities.setCapability("deviceGroup", "KOBITON");
-        capabilities.setCapability("deviceName", "Galaxy J2 Prime");
-        capabilities.setCapability("platformVersion", "6.0.1");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability(MobileCapabilityType.ACCEPT_SSL_CERTS, true);
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, Kobiton.getAutomationName());
+        capabilities.setCapability(SESSION_NAME, Kobiton.getSessionName());
+        capabilities.setCapability(SESSION_DESCRIPTION, Kobiton.getSessionDescription());
+        capabilities.setCapability(DEVICE_ORIENTATION, Kobiton.getDeviceOrientation());
+        capabilities.setCapability(CAPTURE_SCREENSHOTS, Kobiton.getCaptureScreenShot());
+        capabilities.setCapability(MobileCapabilityType.APP, Kobiton.getApp());
+        capabilities.setCapability(DEVICE_GROUP, Kobiton.getDeviceGroup());
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Kobiton.getDeviceName());
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Kobiton.getPlatformVersion());
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Kobiton.getPlatformName());
+        capabilities.setCapability(MobileCapabilityType.ACCEPT_SSL_CERTS, Kobiton.getAcceptSSLCerts());
         return new AndroidDriver(new URL(kobitonServerUrl), capabilities);
     }
 
