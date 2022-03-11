@@ -1,0 +1,29 @@
+{
+  "shoppingListName": "My shopping list",
+  "items": [
+    {
+      "name": "Apples",
+      "quantity": 3
+    },
+    {
+      "name": "Apricots",
+      "quantity": 2
+    },
+    {
+      "name": "Bananas",
+      "quantity": 5
+    },
+    {
+      "name": "Blueberries",
+      "quantity": 15
+    },
+    {
+      "name": "Cantaloupe",
+      "quantity": 1
+    },
+    {
+      "name": "Cherries",
+      "quantity": 30
+    }
+  ]
+}
