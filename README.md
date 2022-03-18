@@ -22,7 +22,7 @@ In my case I preder Intellij Idea by Jetbrains
 
 ## Configurations Files
 
-All the properties can be done in the following  properties file **config.properties** located in the root project folder.
+All the properties can be done in the following  properties file **config.properties** located in src/test/resources folder
 
 	appiumServer=http://localhost:4723/wd/hub [Appium Server URL]
     timeout=30  [timeout in seconds]
